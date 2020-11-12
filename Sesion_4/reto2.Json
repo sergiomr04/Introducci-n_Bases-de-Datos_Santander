@@ -29,3 +29,14 @@
  },
  limit: 1
 }
+
+{
+ project: {
+  title: 1,
+  num_mflix_comments: 1
+ },
+ sort: {
+  num_mflix_comments: -1
+ },
+ limit: 5
+}
