@@ -1,0 +1,39 @@
+{
+ filter: {
+  house_rules: RegExp('(Prohibit|banned|no) part.+', i)
+ }
+}
+
+
+{
+ filter: {
+  $and: [
+   {
+    house_rules: RegExp('Pet.(.are.|\s)allowed', i)
+   },
+   {
+    house_rules: {
+     $not: RegExp('not? Pet.(.are.|\s)allowed', i)
+    }
+   }
+  ]
+ },
+ project: {
+  house_rules: 1
+ },
+ sort: {
+  _id: 1
+ }
+}
+
+
+
+{
+ filter: {
+  house_rules: RegExp('(No.|non.|not.)smok.*', i)
+ },
+ project: {
+  house_rules: 1
+ }
+}
+
