@@ -1,0 +1,19 @@
+Usando las colecciones comments y users, se requiere conocer el correo y contraseña de cada persona 
+que realizó un comentario. Construye un pipeline que genere como resultado estos datos.
+
+
+
+[{$lookup: {
+  from: 'users',
+  localField: 'email',
+  foreignField: 'email',
+  as: 'usuarios'
+}}, {$addFields: {
+  usuarios_objeto:{$arrayElemAt:["$usuarios",0]}
+}}, {$project: {
+  _id:0,
+  Nombre_usuario:"$usuarios_objeto.name",
+  email:1,
+  Contraseña:"$usuarios_objeto.password"
+
+  }}]
