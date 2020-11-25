@@ -1,4 +1,4 @@
--- Reto 2
+-- Reto 1
 -- Sergio MAldonado Rodriguez
 -- Definir los campos y tipos de datos para la tabla movies haciendo uso de los archivos movies.dat y README.
 -- Crear la tabla movies (recuerda usar el mismo nombre del archivo sin la extensión para vincular nombres de tablas con archivos).
